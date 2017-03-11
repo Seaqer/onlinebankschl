@@ -20,13 +20,13 @@ import java.util.List;
 
 @Repository
 public class SimpleAccountDao implements AccountDao {
-    private final String INSERT_ACCOUNT="INSERT INTO ACCOUNT VALUES(ACC_ID_SEQ.NEXTVAL,ACC_NUMBER_SEQ.NEXTVAL, 0 , :accountType , :clientId , SYSDATE , :accountStatus );";
-    private final String UPDATE_ACCOUNT="UPDATE ACCOUNT SET ACC_NUMBER= :accountNumber , BALANCE= :balance , ACTP_ACTP_NAME= :accountType WHERE ACC_ID= :id ";
-    private final String DELETE_ACCOUNT="DELETE FROM ACCOUNT WHERE ACC_ID = :id ;";
-    private final String SEARCH_ACCOUNT="SELECT * FROM ACCOUNT WHERE ACC_NUMBER = :accountNumber ;";
-    private final String SEARCH_ACCOUNT_CLNT="SELECT * FROM ACCOUNT WHERE CLIENT_ID = :clientId ;";
-    private final String UPDATE_BALANCE="UPDATE ACCOUNT SET BALANCE= :balance WHERE ACC_ID= :id ; ";
-    private final String UPDATE_ACCOUNT_STATUS="UPDATE ACCOUNT SET STAT_STAT_ID= :accountStatus WHERE ACC_ID= :id ;";
+    private final String INSERT_ACCOUNT = "INSERT INTO ACCOUNT VALUES(ACC_ID_SEQ.NEXTVAL,ACC_NUMBER_SEQ.NEXTVAL, 0 , :accountType , :clientId , SYSDATE , :accountStatus );";
+    private final String UPDATE_ACCOUNT = "UPDATE ACCOUNT SET ACC_NUMBER= :accountNumber , BALANCE= :balance , ACTP_ACTP_NAME= :accountType WHERE ACC_ID= :id ";
+    private final String DELETE_ACCOUNT = "DELETE FROM ACCOUNT WHERE ACC_ID = :id ;";
+    private final String SEARCH_ACCOUNT = "SELECT * FROM ACCOUNT WHERE ACC_NUMBER = :accountNumber ;";
+    private final String SEARCH_ACCOUNT_CLNT = "SELECT * FROM ACCOUNT WHERE CLIENT_ID = :clientId ;";
+    private final String UPDATE_BALANCE = "UPDATE ACCOUNT SET BALANCE= :balance WHERE ACC_ID= :id ; ";
+    private final String UPDATE_ACCOUNT_STATUS = "UPDATE ACCOUNT SET STAT_STAT_ID= :accountStatus WHERE ACC_ID= :id ;";
     private final AccountRowMapper accountRowMapper = new AccountRowMapper();
 
     @Autowired

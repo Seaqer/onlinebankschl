@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.sbt</groupId>
-    <artifactId>onlinebank</artifactId>
+    <artifactId>onlinebankschl</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+
     <modules>
         <module>core</module>
         <module>authservice</module>
@@ -41,6 +42,7 @@
         </plugins>
     </build>
 
+<dependencyManagement>
     <dependencies>
         <!-- Spring -->
         <dependency>
@@ -63,6 +65,11 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${springframework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
 
         <!-- Spring Boot -->
         <dependency>
@@ -73,6 +80,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>pring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>pring-boot-starter-data-jpa</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
         <dependency>
@@ -137,4 +154,5 @@
             <version>${activemq.version}</version>
         </dependency>
     </dependencies>
+</dependencyManagement>
 </project>
